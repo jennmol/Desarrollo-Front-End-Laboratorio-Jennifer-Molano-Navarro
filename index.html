@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laboratorio de Desarrollo Front-End (Jennifer Molano Navarro)</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="./index.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+    <form name="formulario">
+        <h1>Create Account</h1>
+        <fieldset>
+            <label>Nombre</label> 
+            <input type="text" name="name" value="" onblur="validateName()" required>
+            <span id="name_error" role="alert"></span>
+            
+            <label>Email</label> 
+            <input type="text" name="email" value="" onblur="validateEmail()" required>
+            <span id="email_error" role="alert"></span>
+            
+            <label>Clave</label> 
+            <input type="password" name="password" value="" onblur="validatePassword()" required>
+            <span id="password_error" role="alert"></span>
+           
+            
+            <label>Confirme su clave</label> 
+            <input type="password" name="confirmarClave" value="" onblur="validateConfirm(), validatePassword()" required>
+            <span id="confirm_error" role="alert"></span>
+            
+            <input type="submit" value="ENVIAR" id="button" onclick="return validateName(), validateEmail(), validatePassword(), validateConfirm(), validateForm(), borderButton()"</>
+        </fieldset>
+    </form>
+    </div>
+</body>
+
+</html>
